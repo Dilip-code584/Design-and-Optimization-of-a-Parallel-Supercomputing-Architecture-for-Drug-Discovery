@@ -1,42 +1,71 @@
-# Deploy From Source
+Quantum Computing Exploration for Drug Discovery on AWS
+Overview
+Quantum Computing Exploration for Drug Discovery on AWS is an open-source solution that allows researchers and quantum computing advocates to design and run computational studies in the field of drug discovery. With this solution, you can access quantum computers via the Amazon Braket service. The Amazon Braket Hybrid Job feature allows you to use classical computing and quantum computing resources to evaluate experiment values such as cost, time, and performance. The solution comes with built-in sample code for certain drug discovery problems, such as molecular docking, protein folding, RNA folding, and retrosynthetic planning, to help you get started with quantum computing in the field.
 
-## Regions
+The overall architecture is shown as below:
 
-| Region Name           | Region ID |
-| --------------------- | --------- |
-| US East (N. Virginia) | us-east-1 |
-| US West (California)  | us-west-1 |
-| US West (Oregon)      | us-west-2 |
-| Europe (London)       | eu-west-2 |
+architecture
 
-## Deployment
+For detailed description of architecture, please refer to the Architecture Page
 
-Deploy solution to your AWS account by [AWS CDK](https://docs.aws.amazon.com/cdk/v2/guide/home.html).
+This solution deploys the Amazon CloudFormation template in your AWS Cloud account and provides the URL for Notebook Experiment about drug discovery problems.
 
-### Prerequisites
+Pre-built Examples for Drug Discovery1,2
+Problem Name	Method	Reference
+Molecular Unfolding	QUBO	Quantum Molecular Unfolding(2021)
+RNA folding	QUBO	RNA folding using quantum computers(2022)
+QHack 2022 winner
+Protein folding	Quantum Walk	QFold: quantum walk and deep learning to solve protein folding(2022)
+Roberto Campos's Implementation
+VQE	--
+Grover's Algorithm	Quantum Speedup for Protein Structure Prediction(2022)
+Renata Wong's Implementation
+Retrosynthetic Planning	Quantum Reinforcement Learning	Learning Retrosynthetic Planning through Simulated Experience(2019)
+1.More examples to be added with continuous update
+File Structure
+Upon successfully cloning the repository into your local development environment, you will see the following file structure in your editor:
 
-- An AWS account
-- Configure [credential of aws cli](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-quickstart.html)
-- Install Node.js LTS version, such as 12.x
-- Install Docker Engine
-- Install the dependencies of solution via executing command `npm install`
-- Initialize the CDK toolkit stack into AWS environment(only for deploying via AWS CDK first time, [doc](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install))
+├── CHANGELOG.md                  [Change log file]
+├── CODE_OF_CONDUCT.md            [Code of conduct file]
+├── CONTRIBUTING.md               [Contribution guide]
+├── LICENSE                       [LICENSE for this solution]
+├── NOTICE                        [Notice for 3rd-party libraries]
+├── README.md                     [Read me file]
+├── docs                          [Solution's document]
+│   ├── en
+│   ├── index.html
+│   ├── mkdocs.base.yml
+│   ├── mkdocs.en.yml
+│   ├── mkdocs.zh.yml
+│   └── zh
+└── source                        [Solution's source and test code]
+    ├── README.md
+    ├── cdk.json
+    ├── package-lock.json
+    ├── package.json
+    ├── src                       [Solution's source code]
+    │   ├── cdk
+    │   ├── notebook
+    │   │   └── healthcare-and-life-sciences
+    │   │       ├── a-1-molecular-unfolding-quadratic-unconstrained-binary-optimization
+    │   │       ├── b-1-folding-quadratic-unconstrained-binary-optimization
+    │   │       ├── c-1-rna-folding-quadratic-unconstrained-binary-optimization
+    │   │       ├── c-2-protein-folding-variational-quantum-eigensolver
+    │   │       ├── c-3-protein-folding-grover-search
+    │   │       └── d-1-retrosynthetic-planning-quantum-reinforcement-learning 
+    │   └── stack.ts
+    ├── test                      [Solution's unit test code]
+    ├── tsconfig.jest.json
+    ├── tsconfig.json
+    └── version.json
+Deploy From Source
+Refer to prerequisites and deployment
 
-### Deploy solution by AWS CDK
+Running Unit Tests
+The /source/run-all-tests.sh script is the centralized script for running all unit, integration, and snapshot tests for both the CDK project as well as any associated Lambda functions or other source code packages.
 
-- Run below command to deploy the solution(all parts):
 
-```sh
-    cd source
-    npx cdk deploy QCEDDStack  \
-      --parameters snsEmail=<your email used for subscription topic>
-```
+cd ./source
+chmod +x ./run-all-tests.sh
+./run-all-tests.sh
 
-The output messages show status of the deployment, it takes approximately 10 minutes for the whole process.
-
-## How to test
-
-```sh
-    cd source
-    npm run test
-```
