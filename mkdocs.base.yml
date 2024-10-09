@@ -1,0 +1,27 @@
+site_name: Quantum Computing Exploration for Drug Discovery on AWS
+site_url: https://awslabs.github.io/quantum-computing-exploration-for-drug-discovery-on-aws/
+repo_url: https://github.com/awslabs/quantum-computing-exploration-for-drug-discovery-on-aws/
+
+theme:
+  name: material
+  features:
+    - tabs
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - markdownextradata: {}
+  - mkdocs-jupyter:
+      ignore_h1_titles: True
+
+extra:
+  alternate:
+    - name: English
+      link: /quantum-computing-exploration-for-drug-discovery-on-aws/en/
+      lang: en
+    - name: 中文
+      link: /quantum-computing-exploration-for-drug-discovery-on-aws/zh/
+      lang: zh
+  cf_template:
+      url: https://solutions-reference.s3.amazonaws.com/quantum-computing-exploration-for-drug-discovery-on-aws/v1.1.0/QCEDDStack.template
