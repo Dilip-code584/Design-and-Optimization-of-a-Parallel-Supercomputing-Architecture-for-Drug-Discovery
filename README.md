@@ -6,6 +6,9 @@ The overall architecture is shown as below:
 
 architecture
 
+![image](https://github.com/user-attachments/assets/e6b416cf-e2f4-46aa-acf4-fb94110c22c6)
+
+
 For detailed description of architecture, please refer to the Architecture Page
 
 This solution deploys the Amazon CloudFormation template in your AWS Cloud account and provides the URL for Notebook Experiment about drug discovery problems.
