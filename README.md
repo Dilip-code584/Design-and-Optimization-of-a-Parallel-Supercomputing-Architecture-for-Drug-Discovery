@@ -28,39 +28,7 @@ Retrosynthetic Planning	Quantum Reinforcement Learning	Learning Retrosynthetic P
 File Structure
 Upon successfully cloning the repository into your local development environment, you will see the following file structure in your editor:
 
-├── CHANGELOG.md                  [Change log file]
-├── CODE_OF_CONDUCT.md            [Code of conduct file]
-├── CONTRIBUTING.md               [Contribution guide]
-├── LICENSE                       [LICENSE for this solution]
-├── NOTICE                        [Notice for 3rd-party libraries]
-├── README.md                     [Read me file]
-├── docs                          [Solution's document]
-│   ├── en
-│   ├── index.html
-│   ├── mkdocs.base.yml
-│   ├── mkdocs.en.yml
-│   ├── mkdocs.zh.yml
-│   └── zh
-└── source                        [Solution's source and test code]
-    ├── README.md
-    ├── cdk.json
-    ├── package-lock.json
-    ├── package.json
-    ├── src                       [Solution's source code]
-    │   ├── cdk
-    │   ├── notebook
-    │   │   └── healthcare-and-life-sciences
-    │   │       ├── a-1-molecular-unfolding-quadratic-unconstrained-binary-optimization
-    │   │       ├── b-1-folding-quadratic-unconstrained-binary-optimization
-    │   │       ├── c-1-rna-folding-quadratic-unconstrained-binary-optimization
-    │   │       ├── c-2-protein-folding-variational-quantum-eigensolver
-    │   │       ├── c-3-protein-folding-grover-search
-    │   │       └── d-1-retrosynthetic-planning-quantum-reinforcement-learning 
-    │   └── stack.ts
-    ├── test                      [Solution's unit test code]
-    ├── tsconfig.jest.json
-    ├── tsconfig.json
-    └── version.json
+├── CHANGELOG.md # Change log file ├── CODE_OF_CONDUCT.md # Code of conduct file ├── CONTRIBUTING.md # Contribution guide ├── LICENSE # License for this solution ├── NOTICE # Notice for 3rd-party libraries ├── README.md # Top-level README ├── docs # Solution documentation │ ├── en │ ├── zh │ ├── index.html │ ├── mkdocs.base.yml │ ├── mkdocs.en.yml │ └── mkdocs.zh.yml ├── source # Source code and tests │ ├── README.md │ ├── cdk.json │ ├── package-lock.json │ ├── package.json │ ├── tsconfig.jest.json │ ├── tsconfig.json │ ├── version.json │ ├── src │ │ ├── cdk │ │ └── notebook │ │ └── healthcare-and-life-sciences │ │ ├── a-1-molecular-unfolding-quadratic-unconstrained-binary-optimization │ │ ├── b-1-folding-quadratic-unconstrained-binary-optimization │ │ ├── c-1-rna-folding-quadratic-unconstrained-binary-optimization │ │ ├── c-2-protein-folding-variational-quantum-eigensolver │ │ ├── c-3-protein-folding-grover-search │ │ └── d-1-retrosynthetic-planning-quantum-reinforcement-learning │ └── test # Unit tests
 Deploy From Source
 Refer to prerequisites and deployment
 
