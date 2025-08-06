@@ -15,11 +15,17 @@ For detailed description of architecture, please refer to the Architecture Page
 This solution deploys the Amazon CloudFormation template in your AWS Cloud account and provides the URL for Notebook Experiment about drug discovery problems.
 
 Pre-built Examples for Drug Discovery1,2
+
 Problem Name	Method	Reference
+
 Molecular Unfolding	QUBO	Quantum Molecular Unfolding(2021)
+
 RNA folding	QUBO	RNA folding using quantum computers(2022)
+
 QHack 2022 winner
+
 Protein folding	Quantum Walk	QFold: quantum walk and deep learning to solve protein folding(2022)
+
 Roberto Campos's Implementation
 VQE	--
 Grover's Algorithm	Quantum Speedup for Protein Structure Prediction(2022)
