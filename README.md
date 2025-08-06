@@ -6,7 +6,6 @@ Quantum Computing Exploration for Drug Discovery on AWS is an open-source soluti
 
 The overall architecture is shown as below:
 
-architecture
 
 ![image](https://github.com/user-attachments/assets/e6b416cf-e2f4-46aa-acf4-fb94110c22c6)
 
